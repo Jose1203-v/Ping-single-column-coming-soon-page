@@ -1,0 +1,54 @@
+//Archivo con los estilos del footer de la página.
+
+@import "variables";
+
+
+//Estilos para el elemento footer.
+.pie-pagina {
+
+    margin-top: $MarginSuperiorFooter;
+
+    small {
+        color: $ColorFuenteInputPlaceholderSmall;
+
+        font-size: $SizeFuenteTextoSmall;
+    }
+}
+
+
+// Estilos para el contenedor de las redes sociales.
+.contenedor-redes-sociales {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: $MarginBottomContenedorBotonesRedes;
+    gap: 1.5rem;
+
+    // Código para los estilos del elemento a.
+    a {
+        display: block;
+
+        padding-top: $PaddingTopBotonesRedes;
+        width: $WidthHeight;
+        height: $WidthHeight;
+
+        color: #4D7CF1;
+
+        border: $BordeInputRedes;
+        border-radius: $WidthHeight/2;
+
+        cursor: pointer;
+
+        // Código para el hover del elemento a.
+        &:hover{
+
+            background: $BackgroundBotonRedesHover;
+
+            border: none;
+
+            i {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+//Archivo con los estilos del contenendor-texto y todos sus elementos.
+
+@import "variables";
+
+// Estilos para el contendor-Texto.
+.contenedor-texto {
+    // Margin inferiror.
+    margin-bottom: $MarginInferiorContendorTexto;
+}
+
+
+//Estilos para el titulo. 
+.title {
+
+    // Cambio de color de la fuente del titulo.
+    color: $ColorFuenteTitulo;
+
+    // Margen inferior para el titulo.
+    margin-bottom: $MarginInferiorTitulo;
+
+    // Estilos para la fuente del titulo.
+    font: {
+        size: $SizeFuenteTitulo; //Tamaño de la fuente.
+        weight: $Weight300; //Grosor de la funete.
+    }
+
+
+    //Estilos para el texto que se encuentra dentro del elemento span del titulo.
+    span {
+
+        color: $ColorFuenteTituloSpan; //Color del texto.
+
+        font-weight: $weight700; //Grosor del texto.
+    }
+
+    //Media Query que se aplica a un tamaño de pantalla de 490px. Se cambia el tamaño de fuente.
+    @media (max-width: 490px) {
+        font-size: $SizeFunetetituloResponsive490px;
+    }
+}
+
+//Estilos para el texto.
+
+.texto {
+    // Color para la fuente.
+    color: $ColorFuenteTextoInput;
+
+    font: {
+        size: $SizeFuenteTexto;
+        weight: $Weight300;
+    }
+
+    //Media Query que se aplica a un tamaño de pantalla de 490px. Se cambia el tamaño de fuente.
+    @media (max-width: 490px) {
+        font-size: $SizeFuenteTextoInputPlaceholderBotonResponsive490;
+    }
+}

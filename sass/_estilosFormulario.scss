@@ -1,0 +1,123 @@
+//Estilos para el formulario y todos los elementos hijos.
+
+@import "variables";
+
+//Estilos para el formulario. 
+#formulario {
+
+    //Convirtiendo el formulario en un elemento Flex.
+    display: flex;
+
+    //Agregandole un separamiento de 20px a los elementos dentro del forulario.
+    gap: 2rem;
+
+    //Margen inferior.
+    margin-bottom: $MarginInferiorFormulario;
+
+    & > div {
+        text-align: left;
+
+
+        flex: 1;
+        max-width: $MaxWidthInput;
+
+
+        @media (max-width: 645px) {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    //Media Query para modificar el orden de los elementos del formulario. 
+    @media (max-width: 645px) {
+        flex-direction: column;
+    }
+}
+
+// Estilos del elemento input.
+#inputEmail {
+
+    // Modificando las dimenciones y los espacios delo input.
+    width: 100%;
+    height: $HeightInputBoton;
+    padding: $PaddingInput;
+    margin-bottom: 1.2rem;
+
+    // Modificando los border del input.
+    border-radius: $HeightInputBoton / 2;
+    border: $BordeInputRedes;
+    outline: none;
+
+    // Modificando el color de la fuente del input.
+    color: $ColorFuenteTextoInput;
+
+    // Modificando el tamaño de la fuente del input.
+    font: {
+        size: $SizeFuenteInputPlaceholderBoton;
+    }
+
+    //Cambiandole el color al puntedo del input.
+    caret-color: $ColorFuenteInputPlaceholderSmall;
+
+    // Modificando los estilos del texto del placeholder del input.
+    &::placeholder {
+
+        opacity: 1;
+        color: $ColorFuenteInputPlaceholderSmall;
+    }
+
+    //Media Query para modificar las dimensiones del elemento.
+    @media (max-width: 645px) {
+
+
+        font-size: $SizeFuenteTextoInputPlaceholderBotonResponsive490;
+
+        &::placeholder {
+            font-size: $SizeFuenteTextoInputPlaceholderBotonResponsive490;
+        }
+    }
+
+}
+
+// Estilos del elemento bottom.
+#enviar {
+
+    flex: 1;
+
+    //Modificando los colores del botón.
+    background: $BackgroundBoton;
+    color: #fff;
+
+    //Modificando las dimensiones del botón.
+    max-width: $MaxWidthBoton;
+    height: $HeightInputBoton;
+
+    //Modificando los bordes del botón.
+    border: none;
+    border-radius: $HeightInputBoton / 2;
+
+    //Modificando la fuente del botón.
+    font: {
+        weight: $weight700;
+    }
+
+    //Estilos para cambiar el fondo al pasar el puntero por encima del elemento. 
+    &:hover {
+        background: $BackgroundBotonHover;
+    }
+
+    cursor: pointer;
+
+    //Media Query para modificar las dimensiones del elemento.
+    @media (max-width: 645px) {
+        width: 100%;
+        max-width: none;
+        min-height: $HeightInputBoton;
+        font-weight: 600;
+
+        font-size: $SizeFuenteTextoInputPlaceholderBotonResponsive490;
+
+       
+    }
+}
+

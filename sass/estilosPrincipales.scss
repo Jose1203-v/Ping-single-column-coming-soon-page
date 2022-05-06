@@ -1,0 +1,54 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    font-family: "Libre Franklin";
+
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+// Estilos para aplicarle los estilos al body y al contenedor principal.
+
+body {
+
+    //Código para hacer que el contenedor principal quede centrado.
+    display: flex;
+    
+    justify-content: center;
+
+    // Estilos para el contenedor principal.
+    .contenedor-principal { 
+
+        width: 95%;
+
+        //Agregandole un ancho maximo al contenedor principal.
+        max-width: $MaxWidthContenedorPrincipal; 
+
+        //Margenes del contenedor principal.
+        margin: {
+            top: $MarginSuperiorContenedorPrincipal; //Margen Superior.
+            bottom: $MarginInferiorContenedorPrincipal; //Margen inferior.
+        }
+
+        //Centrado de el texto de los elementos del contendor principal.
+        text-align: center; 
+    }
+}
+
+
+//Importar estilos del header.
+@import "header";
+//Importar estilos del contenedor-texto.
+@import "contenedorTexto";
+//Importar estilos del formulario.1
+@import "estilosFormulario";
+// Importar estilos de la imagen.
+@import "estilosImg";
+//Impotar estilos del footer.
+@import "estilosFooter";
+
